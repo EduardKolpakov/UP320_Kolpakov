@@ -13,7 +13,7 @@
         <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="60" Height="75" FontFamily="Mistral"><Run Language="ru-ru" Text="Кэтыц"/><LineBreak/><Run Language="ru-ru"/></TextBlock>
         <Button x:Name="CaphBtn" Content="Кафедры" HorizontalAlignment="Left" Margin="33,29,0,0" VerticalAlignment="Top" Height="25" Width="75" Background="White"/>
         <Button x:Name="DiscBtn" Content="Дисциплины" HorizontalAlignment="Left" Margin="121,29,0,0" VerticalAlignment="Top" Width="100" Height="25"/>
-        <ListView Grid.Row="1" Name="ListEmployees" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Margin="0, 78, 0, 0">
+        <ListView Grid.Row="1" Name="ListEmployees" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Margin="0, 148, 0, 0">
             <ListView.View>
                 <GridView>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=ID}" Width="80">id</GridViewColumn>
@@ -29,5 +29,11 @@
         <Button x:Name="EditBtn" Content="Редактировать" HorizontalAlignment="Left" Margin="861,29,0,0" VerticalAlignment="Top" Height="25" Width="100" Click="EditBtn_Click"/>
         <Button x:Name="DelBtn" Content="Удалить" HorizontalAlignment="Left" Margin="767,29,0,0" VerticalAlignment="Top" Height="25" Width="75" Click="DelBtn_Click"/>
         <Button x:Name="AddBtn" Content="Добавить" HorizontalAlignment="Left" Margin="673,29,0,0" VerticalAlignment="Top" Height="25" Width="75" Click="AddBtn_Click"/>
+        <TextBox x:Name="TxtSearch" HorizontalAlignment="Left" Margin="10,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="360" Height="24" TextChanged="TxtSearch_TextChanged"/>
+        <Label Content="Поиск" HorizontalAlignment="Left" Margin="10,83,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="FilterBox" HorizontalAlignment="Left" Margin="405,110,0,0" VerticalAlignment="Top" Width="165" SelectionChanged="ComboBox_SelectionChanged"/>
+        <Label Content="Фильтр" HorizontalAlignment="Left" Margin="405,84,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="SortBox" HorizontalAlignment="Left" Margin="596,110,0,0" VerticalAlignment="Top" Width="165" SelectionChanged="ComboBox_SelectionChanged"/>
+        <Label Content="Сортировка" HorizontalAlignment="Left" Margin="596,84,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Page>
