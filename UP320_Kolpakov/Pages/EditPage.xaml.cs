@@ -50,7 +50,7 @@ namespace UP320_Kolpakov.Pages
             ChiefId.Text = em.Chief.ToString();
             if (em.Position != "инженер")
             {
-                t = ConnectionClass.connect.Teachers.Where(z => z.EmpID == em.ID).FirstOrDefault();
+                t = ConnectionClass.connect.Teacher.Where(z => z.EmpID == em.ID).FirstOrDefault();
                 RangBox.SelectedValue = t.rang.ToString();
                 StepBox.SelectedValue = t.stepen.ToString();
             }
@@ -97,11 +97,11 @@ namespace UP320_Kolpakov.Pages
                     teacher.EmpID = em.ID;
                     teacher.rang = RangBox.SelectedValue.ToString();
                     teacher.stepen = StepBox.SelectedValue.ToString();
-                    ConnectionClass.connect.Teachers.Add(teacher);
+                    ConnectionClass.connect.Teacher.Add(teacher);
                 }
                 else if (em.Position != "инженер" && PosBox.SelectedValue.ToString() == "инженер")
                 {
-                    ConnectionClass.connect.Teachers.Remove(t);
+                    ConnectionClass.connect.Teacher.Remove(t);
                 }
                 else
                 {
@@ -143,6 +143,29 @@ namespace UP320_Kolpakov.Pages
         private void BackBtn_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.GoBack();
+        }
+        private void IdTxt_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.Text, 0);
+        }
+
+        private void CaphIdTxt_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void FullNameTxt_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            if (!char.IsLetter(e.Text, 0))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void ChiefIdTxt_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+
+            e.Handled = !char.IsDigit(e.Text, 0);
         }
     }
 }

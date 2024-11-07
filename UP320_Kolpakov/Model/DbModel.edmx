@@ -4,17 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="Хранилище Zakaz_220_KolpakovModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="Academics">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="name" Type="nvarchar" MaxLength="50" />
-          <Property Name="birthdate" Type="date" />
-          <Property Name="Speciality" Type="nvarchar" MaxLength="30" />
-          <Property Name="assignment_year" Type="int" />
-        </EntityType>
+      <Schema Namespace="Хранилище Zakaz_220_KolpakovModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Caphedra">
           <Key>
             <PropertyRef Name="ID" />
@@ -113,7 +103,7 @@
           <Property Name="ID" Type="int" Nullable="false" />
           <Property Name="Experience" Type="int" />
         </EntityType>
-        <Association Name="FK__Caphedra__FacID__778AC167">
+        <Association Name="FK__Caphedra__FacID__5EBF139D">
           <End Role="Facultet" Type="Self.Facultet" Multiplicity="0..1" />
           <End Role="Caphedra" Type="Self.Caphedra" Multiplicity="*" />
           <ReferentialConstraint>
@@ -125,7 +115,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Disciple__CaphID__01142BA1">
+        <Association Name="FK__Disciple__CaphID__60A75C0F">
           <End Role="Caphedra" Type="Self.Caphedra" Multiplicity="0..1" />
           <End Role="Disciple" Type="Self.Disciple" Multiplicity="*" />
           <ReferentialConstraint>
@@ -137,7 +127,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Employe__CaphID__7A672E12">
+        <Association Name="FK__Employe__CaphID__619B8048">
           <End Role="Caphedra" Type="Self.Caphedra" Multiplicity="0..1" />
           <End Role="Employe" Type="Self.Employe" Multiplicity="*" />
           <ReferentialConstraint>
@@ -149,7 +139,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Exam__DiscID__10566F31">
+        <Association Name="FK__Exam__DiscID__656C112C">
           <End Role="Disciple" Type="Self.Disciple" Multiplicity="0..1" />
           <End Role="Exam" Type="Self.Exam" Multiplicity="*" />
           <ReferentialConstraint>
@@ -161,7 +151,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Exam__StudentID__114A936A">
+        <Association Name="FK__Exam__StudentID__66603565">
           <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
           <End Role="Exam" Type="Self.Exam" Multiplicity="*" />
           <ReferentialConstraint>
@@ -173,7 +163,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Exam__TeacherID__123EB7A3">
+        <Association Name="FK__Exam__TeacherID__6754599E">
           <End Role="Teacher" Type="Self.Teacher" Multiplicity="0..1" />
           <End Role="Exam" Type="Self.Exam" Multiplicity="*" />
           <ReferentialConstraint>
@@ -185,7 +175,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Specialit__CaphI__7E37BEF6">
+        <Association Name="FK__Specialit__CaphI__6E01572D">
           <End Role="Caphedra" Type="Self.Caphedra" Multiplicity="0..1" />
           <End Role="Speciality" Type="Self.Speciality" Multiplicity="*" />
           <ReferentialConstraint>
@@ -197,7 +187,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Student__SpecID__0D7A0286">
+        <Association Name="FK__Student__SpecID__6EF57B66">
           <End Role="Speciality" Type="Self.Speciality" Multiplicity="0..1" />
           <End Role="Student" Type="Self.Student" Multiplicity="*" />
           <ReferentialConstraint>
@@ -246,7 +236,6 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="Хранилище Zakaz_220_KolpakovModelContainer">
-          <EntitySet Name="Academics" EntityType="Self.Academics" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Caphedra" EntityType="Self.Caphedra" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Disciple" EntityType="Self.Disciple" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Employe" EntityType="Self.Employe" Schema="dbo" store:Type="Tables" />
@@ -258,35 +247,35 @@
           <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Teacher" EntityType="Self.Teacher" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ZavCaph" EntityType="Self.ZavCaph" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Caphedra__FacID__778AC167" Association="Self.FK__Caphedra__FacID__778AC167">
+          <AssociationSet Name="FK__Caphedra__FacID__5EBF139D" Association="Self.FK__Caphedra__FacID__5EBF139D">
             <End Role="Facultet" EntitySet="Facultet" />
             <End Role="Caphedra" EntitySet="Caphedra" />
           </AssociationSet>
-          <AssociationSet Name="FK__Disciple__CaphID__01142BA1" Association="Self.FK__Disciple__CaphID__01142BA1">
+          <AssociationSet Name="FK__Disciple__CaphID__60A75C0F" Association="Self.FK__Disciple__CaphID__60A75C0F">
             <End Role="Caphedra" EntitySet="Caphedra" />
             <End Role="Disciple" EntitySet="Disciple" />
           </AssociationSet>
-          <AssociationSet Name="FK__Employe__CaphID__7A672E12" Association="Self.FK__Employe__CaphID__7A672E12">
+          <AssociationSet Name="FK__Employe__CaphID__619B8048" Association="Self.FK__Employe__CaphID__619B8048">
             <End Role="Caphedra" EntitySet="Caphedra" />
             <End Role="Employe" EntitySet="Employe" />
           </AssociationSet>
-          <AssociationSet Name="FK__Exam__DiscID__10566F31" Association="Self.FK__Exam__DiscID__10566F31">
+          <AssociationSet Name="FK__Exam__DiscID__656C112C" Association="Self.FK__Exam__DiscID__656C112C">
             <End Role="Disciple" EntitySet="Disciple" />
             <End Role="Exam" EntitySet="Exam" />
           </AssociationSet>
-          <AssociationSet Name="FK__Exam__StudentID__114A936A" Association="Self.FK__Exam__StudentID__114A936A">
+          <AssociationSet Name="FK__Exam__StudentID__66603565" Association="Self.FK__Exam__StudentID__66603565">
             <End Role="Student" EntitySet="Student" />
             <End Role="Exam" EntitySet="Exam" />
           </AssociationSet>
-          <AssociationSet Name="FK__Exam__TeacherID__123EB7A3" Association="Self.FK__Exam__TeacherID__123EB7A3">
+          <AssociationSet Name="FK__Exam__TeacherID__6754599E" Association="Self.FK__Exam__TeacherID__6754599E">
             <End Role="Teacher" EntitySet="Teacher" />
             <End Role="Exam" EntitySet="Exam" />
           </AssociationSet>
-          <AssociationSet Name="FK__Specialit__CaphI__7E37BEF6" Association="Self.FK__Specialit__CaphI__7E37BEF6">
+          <AssociationSet Name="FK__Specialit__CaphI__6E01572D" Association="Self.FK__Specialit__CaphI__6E01572D">
             <End Role="Caphedra" EntitySet="Caphedra" />
             <End Role="Speciality" EntitySet="Speciality" />
           </AssociationSet>
-          <AssociationSet Name="FK__Student__SpecID__0D7A0286" Association="Self.FK__Student__SpecID__0D7A0286">
+          <AssociationSet Name="FK__Student__SpecID__6EF57B66" Association="Self.FK__Student__SpecID__6EF57B66">
             <End Role="Speciality" EntitySet="Speciality" />
             <End Role="Student" EntitySet="Student" />
           </AssociationSet>
@@ -303,20 +292,11 @@
             <End Role="Teacher" EntitySet="Teacher" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Zakaz_220_KolpakovModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Academic">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="birthdate" Type="DateTime" Precision="0" />
-          <Property Name="Speciality" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="assignment_year" Type="Int32" />
-        </EntityType>
         <EntityType Name="Caphedra">
           <Key>
             <PropertyRef Name="ID" />
@@ -325,10 +305,10 @@
           <Property Name="shifr" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="FacID" Type="Int32" />
-          <NavigationProperty Name="Facultet" Relationship="Self.FK__Caphedra__FacID__778AC167" FromRole="Caphedra" ToRole="Facultet" />
-          <NavigationProperty Name="Disciples" Relationship="Self.FK__Disciple__CaphID__01142BA1" FromRole="Caphedra" ToRole="Disciple" />
-          <NavigationProperty Name="Employes" Relationship="Self.FK__Employe__CaphID__7A672E12" FromRole="Caphedra" ToRole="Employe" />
-          <NavigationProperty Name="Specialities" Relationship="Self.FK__Specialit__CaphI__7E37BEF6" FromRole="Caphedra" ToRole="Speciality" />
+          <NavigationProperty Name="Facultet" Relationship="Self.FK__Caphedra__FacID__5EBF139D" FromRole="Caphedra" ToRole="Facultet" />
+          <NavigationProperty Name="Disciple" Relationship="Self.FK__Disciple__CaphID__60A75C0F" FromRole="Caphedra" ToRole="Disciple" />
+          <NavigationProperty Name="Employe" Relationship="Self.FK__Employe__CaphID__619B8048" FromRole="Caphedra" ToRole="Employe" />
+          <NavigationProperty Name="Speciality" Relationship="Self.FK__Specialit__CaphI__6E01572D" FromRole="Caphedra" ToRole="Speciality" />
         </EntityType>
         <EntityType Name="Disciple">
           <Key>
@@ -338,8 +318,8 @@
           <Property Name="Value" Type="Int32" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="CaphID" Type="Int32" />
-          <NavigationProperty Name="Caphedra" Relationship="Self.FK__Disciple__CaphID__01142BA1" FromRole="Disciple" ToRole="Caphedra" />
-          <NavigationProperty Name="Exams" Relationship="Self.FK__Exam__DiscID__10566F31" FromRole="Disciple" ToRole="Exam" />
+          <NavigationProperty Name="Caphedra" Relationship="Self.FK__Disciple__CaphID__60A75C0F" FromRole="Disciple" ToRole="Caphedra" />
+          <NavigationProperty Name="Exam" Relationship="Self.FK__Exam__DiscID__656C112C" FromRole="Disciple" ToRole="Exam" />
         </EntityType>
         <EntityType Name="Employe">
           <Key>
@@ -351,12 +331,10 @@
           <Property Name="Position" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
           <Property Name="Payment" Type="Decimal" Precision="9" Scale="2" />
           <Property Name="Chief" Type="Int32" />
-          <NavigationProperty Name="Caphedra" Relationship="Self.FK__Employe__CaphID__7A672E12" FromRole="Employe" ToRole="Caphedra" />
-          <NavigationProperty Name="Employe1" Relationship="Self.FK__Employe__Chief__7B5B524B" FromRole="Employe" ToRole="Employe1" />
-          <NavigationProperty Name="Employe2" Relationship="Self.FK__Employe__Chief__7B5B524B" FromRole="Employe1" ToRole="Employe" />
-          <NavigationProperty Name="Logins" Relationship="Zakaz_220_KolpakovModel.FK_Logins_Employe" FromRole="Employe" ToRole="Login" />
-          <NavigationProperty Name="Teachers" Relationship="Zakaz_220_KolpakovModel.FK_Teacher_Employe" FromRole="Employe" ToRole="Teacher" />
-          <NavigationProperty Name="ZavCaph" Relationship="Zakaz_220_KolpakovModel.FK_Employe_ZavCaph" FromRole="Employe" ToRole="ZavCaph" />
+          <NavigationProperty Name="Caphedra" Relationship="Self.FK__Employe__CaphID__619B8048" FromRole="Employe" ToRole="Caphedra" />
+          <NavigationProperty Name="ZavCaph" Relationship="Self.FK_Employe_ZavCaph" FromRole="Employe" ToRole="ZavCaph" />
+          <NavigationProperty Name="Logins" Relationship="Self.FK_Logins_Employe" FromRole="Employe" ToRole="Logins" />
+          <NavigationProperty Name="Teacher" Relationship="Self.FK_Teacher_Employe" FromRole="Employe" ToRole="Teacher" />
         </EntityType>
         <EntityType Name="Engineer">
           <Key>
@@ -376,9 +354,9 @@
           <Property Name="TeacherID" Type="Int32" />
           <Property Name="Cabinet" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="Grade" Type="Int32" />
-          <NavigationProperty Name="Disciple" Relationship="Self.FK__Exam__DiscID__10566F31" FromRole="Exam" ToRole="Disciple" />
-          <NavigationProperty Name="Student" Relationship="Self.FK__Exam__StudentID__114A936A" FromRole="Exam" ToRole="Student" />
-          <NavigationProperty Name="Teacher" Relationship="Zakaz_220_KolpakovModel.FK__Exam__TeacherID__123EB7A3" FromRole="Exam" ToRole="Teacher" />
+          <NavigationProperty Name="Disciple" Relationship="Self.FK__Exam__DiscID__656C112C" FromRole="Exam" ToRole="Disciple" />
+          <NavigationProperty Name="Student" Relationship="Self.FK__Exam__StudentID__66603565" FromRole="Exam" ToRole="Student" />
+          <NavigationProperty Name="Teacher" Relationship="Self.FK__Exam__TeacherID__6754599E" FromRole="Exam" ToRole="Teacher" />
         </EntityType>
         <EntityType Name="Facultet">
           <Key>
@@ -387,7 +365,17 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Abbrev" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Caphedras" Relationship="Self.FK__Caphedra__FacID__778AC167" FromRole="Facultet" ToRole="Caphedra" />
+          <NavigationProperty Name="Caphedra" Relationship="Self.FK__Caphedra__FacID__5EBF139D" FromRole="Facultet" ToRole="Caphedra" />
+        </EntityType>
+        <EntityType Name="Logins">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EmpID" Type="Int32" />
+          <NavigationProperty Name="Employe" Relationship="Self.FK_Logins_Employe" FromRole="Logins" ToRole="Employe" />
         </EntityType>
         <EntityType Name="Speciality">
           <Key>
@@ -397,8 +385,8 @@
           <Property Name="Number" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="Definition" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="CaphID" Type="Int32" />
-          <NavigationProperty Name="Caphedra" Relationship="Self.FK__Specialit__CaphI__7E37BEF6" FromRole="Speciality" ToRole="Caphedra" />
-          <NavigationProperty Name="Students" Relationship="Self.FK__Student__SpecID__0D7A0286" FromRole="Speciality" ToRole="Student" />
+          <NavigationProperty Name="Caphedra" Relationship="Self.FK__Specialit__CaphI__6E01572D" FromRole="Speciality" ToRole="Caphedra" />
+          <NavigationProperty Name="Student" Relationship="Self.FK__Student__SpecID__6EF57B66" FromRole="Speciality" ToRole="Student" />
         </EntityType>
         <EntityType Name="Student">
           <Key>
@@ -407,8 +395,19 @@
           <Property Name="ID" Type="Int32" Nullable="false" />
           <Property Name="SpecID" Type="Int32" />
           <Property Name="Fullname" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Exams" Relationship="Self.FK__Exam__StudentID__114A936A" FromRole="Student" ToRole="Exam" />
-          <NavigationProperty Name="Speciality" Relationship="Self.FK__Student__SpecID__0D7A0286" FromRole="Student" ToRole="Speciality" />
+          <NavigationProperty Name="Exam" Relationship="Self.FK__Exam__StudentID__66603565" FromRole="Student" ToRole="Exam" />
+          <NavigationProperty Name="Speciality" Relationship="Self.FK__Student__SpecID__6EF57B66" FromRole="Student" ToRole="Speciality" />
+        </EntityType>
+        <EntityType Name="Teacher">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="rang" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="stepen" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="EmpID" Type="Int32" />
+          <NavigationProperty Name="Employe" Relationship="Self.FK_Teacher_Employe" FromRole="Teacher" ToRole="Employe" />
+          <NavigationProperty Name="Exam" Relationship="Self.FK__Exam__TeacherID__6754599E" FromRole="Teacher" ToRole="Exam" />
         </EntityType>
         <EntityType Name="ZavCaph">
           <Key>
@@ -416,9 +415,9 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" />
           <Property Name="Experience" Type="Int32" />
-          <NavigationProperty Name="Employes" Relationship="Zakaz_220_KolpakovModel.FK_Employe_ZavCaph" FromRole="ZavCaph" ToRole="Employe" />
+          <NavigationProperty Name="Employe" Relationship="Self.FK_Employe_ZavCaph" FromRole="ZavCaph" ToRole="Employe" />
         </EntityType>
-        <Association Name="FK__Caphedra__FacID__778AC167">
+        <Association Name="FK__Caphedra__FacID__5EBF139D">
           <End Role="Facultet" Type="Self.Facultet" Multiplicity="0..1" />
           <End Role="Caphedra" Type="Self.Caphedra" Multiplicity="*" />
           <ReferentialConstraint>
@@ -430,7 +429,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Disciple__CaphID__01142BA1">
+        <Association Name="FK__Disciple__CaphID__60A75C0F">
           <End Role="Caphedra" Type="Self.Caphedra" Multiplicity="0..1" />
           <End Role="Disciple" Type="Self.Disciple" Multiplicity="*" />
           <ReferentialConstraint>
@@ -442,7 +441,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Employe__CaphID__7A672E12">
+        <Association Name="FK__Employe__CaphID__619B8048">
           <End Role="Caphedra" Type="Self.Caphedra" Multiplicity="0..1" />
           <End Role="Employe" Type="Self.Employe" Multiplicity="*" />
           <ReferentialConstraint>
@@ -454,7 +453,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Specialit__CaphI__7E37BEF6">
+        <Association Name="FK__Specialit__CaphI__6E01572D">
           <End Role="Caphedra" Type="Self.Caphedra" Multiplicity="0..1" />
           <End Role="Speciality" Type="Self.Speciality" Multiplicity="*" />
           <ReferentialConstraint>
@@ -466,7 +465,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Exam__DiscID__10566F31">
+        <Association Name="FK__Exam__DiscID__656C112C">
           <End Role="Disciple" Type="Self.Disciple" Multiplicity="0..1" />
           <End Role="Exam" Type="Self.Exam" Multiplicity="*" />
           <ReferentialConstraint>
@@ -478,19 +477,43 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Employe__Chief__7B5B524B">
-          <End Role="Employe" Type="Self.Employe" Multiplicity="0..1" />
-          <End Role="Employe1" Type="Self.Employe" Multiplicity="*" />
+        <Association Name="FK_Employe_ZavCaph">
+          <End Role="ZavCaph" Type="Self.ZavCaph" Multiplicity="0..1" />
+          <End Role="Employe" Type="Self.Employe" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Employe">
+            <Principal Role="ZavCaph">
               <PropertyRef Name="ID" />
             </Principal>
-            <Dependent Role="Employe1">
+            <Dependent Role="Employe">
               <PropertyRef Name="Chief" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Exam__StudentID__114A936A">
+        <Association Name="FK_Logins_Employe">
+          <End Role="Employe" Type="Self.Employe" Multiplicity="0..1" />
+          <End Role="Logins" Type="Self.Logins" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employe">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Logins">
+              <PropertyRef Name="EmpID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Teacher_Employe">
+          <End Role="Employe" Type="Self.Employe" Multiplicity="0..1" />
+          <End Role="Teacher" Type="Self.Teacher" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employe">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Teacher">
+              <PropertyRef Name="EmpID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Exam__StudentID__66603565">
           <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
           <End Role="Exam" Type="Self.Exam" Multiplicity="*" />
           <ReferentialConstraint>
@@ -502,7 +525,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Student__SpecID__0D7A0286">
+        <Association Name="FK__Exam__TeacherID__6754599E">
+          <End Role="Teacher" Type="Self.Teacher" Multiplicity="0..1" />
+          <End Role="Exam" Type="Self.Exam" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teacher">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Exam">
+              <PropertyRef Name="TeacherID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Student__SpecID__6EF57B66">
           <End Role="Speciality" Type="Self.Speciality" Multiplicity="0..1" />
           <End Role="Student" Type="Self.Student" Multiplicity="*" />
           <ReferentialConstraint>
@@ -515,154 +550,69 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="Zakaz_220_KolpakovEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Academics" EntityType="Self.Academic" />
-          <EntitySet Name="Caphedras" EntityType="Self.Caphedra" />
-          <EntitySet Name="Disciples" EntityType="Self.Disciple" />
-          <EntitySet Name="Employes" EntityType="Self.Employe" />
-          <EntitySet Name="Engineers" EntityType="Self.Engineer" />
-          <EntitySet Name="Exams" EntityType="Self.Exam" />
-          <EntitySet Name="Facultets" EntityType="Self.Facultet" />
-          <EntitySet Name="Specialities" EntityType="Self.Speciality" />
-          <EntitySet Name="Students" EntityType="Self.Student" />
-          <EntitySet Name="ZavCaphs" EntityType="Self.ZavCaph" />
-          <AssociationSet Name="FK__Caphedra__FacID__778AC167" Association="Self.FK__Caphedra__FacID__778AC167">
-            <End Role="Facultet" EntitySet="Facultets" />
-            <End Role="Caphedra" EntitySet="Caphedras" />
+          <EntitySet Name="Caphedra" EntityType="Self.Caphedra" />
+          <EntitySet Name="Disciple" EntityType="Self.Disciple" />
+          <EntitySet Name="Employe" EntityType="Self.Employe" />
+          <EntitySet Name="Engineer" EntityType="Self.Engineer" />
+          <EntitySet Name="Exam" EntityType="Self.Exam" />
+          <EntitySet Name="Facultet" EntityType="Self.Facultet" />
+          <EntitySet Name="Logins" EntityType="Self.Logins" />
+          <EntitySet Name="Speciality" EntityType="Self.Speciality" />
+          <EntitySet Name="Student" EntityType="Self.Student" />
+          <EntitySet Name="Teacher" EntityType="Self.Teacher" />
+          <EntitySet Name="ZavCaph" EntityType="Self.ZavCaph" />
+          <AssociationSet Name="FK__Caphedra__FacID__5EBF139D" Association="Self.FK__Caphedra__FacID__5EBF139D">
+            <End Role="Facultet" EntitySet="Facultet" />
+            <End Role="Caphedra" EntitySet="Caphedra" />
           </AssociationSet>
-          <AssociationSet Name="FK__Disciple__CaphID__01142BA1" Association="Self.FK__Disciple__CaphID__01142BA1">
-            <End Role="Caphedra" EntitySet="Caphedras" />
-            <End Role="Disciple" EntitySet="Disciples" />
+          <AssociationSet Name="FK__Disciple__CaphID__60A75C0F" Association="Self.FK__Disciple__CaphID__60A75C0F">
+            <End Role="Caphedra" EntitySet="Caphedra" />
+            <End Role="Disciple" EntitySet="Disciple" />
           </AssociationSet>
-          <AssociationSet Name="FK__Employe__CaphID__7A672E12" Association="Self.FK__Employe__CaphID__7A672E12">
-            <End Role="Caphedra" EntitySet="Caphedras" />
-            <End Role="Employe" EntitySet="Employes" />
+          <AssociationSet Name="FK__Employe__CaphID__619B8048" Association="Self.FK__Employe__CaphID__619B8048">
+            <End Role="Caphedra" EntitySet="Caphedra" />
+            <End Role="Employe" EntitySet="Employe" />
           </AssociationSet>
-          <AssociationSet Name="FK__Specialit__CaphI__7E37BEF6" Association="Self.FK__Specialit__CaphI__7E37BEF6">
-            <End Role="Caphedra" EntitySet="Caphedras" />
-            <End Role="Speciality" EntitySet="Specialities" />
+          <AssociationSet Name="FK__Specialit__CaphI__6E01572D" Association="Self.FK__Specialit__CaphI__6E01572D">
+            <End Role="Caphedra" EntitySet="Caphedra" />
+            <End Role="Speciality" EntitySet="Speciality" />
           </AssociationSet>
-          <AssociationSet Name="FK__Exam__DiscID__10566F31" Association="Self.FK__Exam__DiscID__10566F31">
-            <End Role="Disciple" EntitySet="Disciples" />
-            <End Role="Exam" EntitySet="Exams" />
+          <AssociationSet Name="FK__Exam__DiscID__656C112C" Association="Self.FK__Exam__DiscID__656C112C">
+            <End Role="Disciple" EntitySet="Disciple" />
+            <End Role="Exam" EntitySet="Exam" />
           </AssociationSet>
-          <AssociationSet Name="FK__Employe__Chief__7B5B524B" Association="Self.FK__Employe__Chief__7B5B524B">
-            <End Role="Employe" EntitySet="Employes" />
-            <End Role="Employe1" EntitySet="Employes" />
+          <AssociationSet Name="FK_Employe_ZavCaph" Association="Self.FK_Employe_ZavCaph">
+            <End Role="ZavCaph" EntitySet="ZavCaph" />
+            <End Role="Employe" EntitySet="Employe" />
           </AssociationSet>
-          <AssociationSet Name="FK__Exam__StudentID__114A936A" Association="Self.FK__Exam__StudentID__114A936A">
-            <End Role="Student" EntitySet="Students" />
-            <End Role="Exam" EntitySet="Exams" />
+          <AssociationSet Name="FK_Logins_Employe" Association="Self.FK_Logins_Employe">
+            <End Role="Employe" EntitySet="Employe" />
+            <End Role="Logins" EntitySet="Logins" />
           </AssociationSet>
-          <AssociationSet Name="FK__Student__SpecID__0D7A0286" Association="Self.FK__Student__SpecID__0D7A0286">
-            <End Role="Speciality" EntitySet="Specialities" />
-            <End Role="Student" EntitySet="Students" />
+          <AssociationSet Name="FK_Teacher_Employe" Association="Self.FK_Teacher_Employe">
+            <End Role="Employe" EntitySet="Employe" />
+            <End Role="Teacher" EntitySet="Teacher" />
           </AssociationSet>
-          <EntitySet Name="Teachers" EntityType="Zakaz_220_KolpakovModel.Teacher" />
-          <AssociationSet Name="FK__Exam__TeacherID__123EB7A3" Association="Zakaz_220_KolpakovModel.FK__Exam__TeacherID__123EB7A3">
-            <End Role="Teacher" EntitySet="Teachers" />
-            <End Role="Exam" EntitySet="Exams" />
+          <AssociationSet Name="FK__Exam__StudentID__66603565" Association="Self.FK__Exam__StudentID__66603565">
+            <End Role="Student" EntitySet="Student" />
+            <End Role="Exam" EntitySet="Exam" />
           </AssociationSet>
-          <EntitySet Name="Logins" EntityType="Zakaz_220_KolpakovModel.Login" />
-          <AssociationSet Name="FK_Logins_Employe" Association="Zakaz_220_KolpakovModel.FK_Logins_Employe">
-            <End Role="Employe" EntitySet="Employes" />
-            <End Role="Login" EntitySet="Logins" />
+          <AssociationSet Name="FK__Exam__TeacherID__6754599E" Association="Self.FK__Exam__TeacherID__6754599E">
+            <End Role="Teacher" EntitySet="Teacher" />
+            <End Role="Exam" EntitySet="Exam" />
           </AssociationSet>
-          <AssociationSet Name="FK_Teacher_Employe" Association="Zakaz_220_KolpakovModel.FK_Teacher_Employe">
-            <End Role="Employe" EntitySet="Employes" />
-            <End Role="Teacher" EntitySet="Teachers" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Employe_ZavCaph" Association="Zakaz_220_KolpakovModel.FK_Employe_ZavCaph">
-            <End Role="ZavCaph" EntitySet="ZavCaphs" />
-            <End Role="Employe" EntitySet="Employes" />
+          <AssociationSet Name="FK__Student__SpecID__6EF57B66" Association="Self.FK__Student__SpecID__6EF57B66">
+            <End Role="Speciality" EntitySet="Speciality" />
+            <End Role="Student" EntitySet="Student" />
           </AssociationSet>
         </EntityContainer>
-        <EntityType Name="Teacher">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" />
-          <Property Name="rang" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="stepen" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Exams" Relationship="Zakaz_220_KolpakovModel.FK__Exam__TeacherID__123EB7A3" FromRole="Teacher" ToRole="Exam" />
-          <Property Name="EmpID" Type="Int32" />
-          <NavigationProperty Name="Employe" Relationship="Zakaz_220_KolpakovModel.FK_Teacher_Employe" FromRole="Teacher" ToRole="Employe" />
-        </EntityType>
-        <Association Name="FK__Exam__TeacherID__123EB7A3">
-          <End Type="Zakaz_220_KolpakovModel.Teacher" Role="Teacher" Multiplicity="0..1" />
-          <End Type="Zakaz_220_KolpakovModel.Exam" Role="Exam" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Teacher">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="Exam">
-              <PropertyRef Name="TeacherID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityType Name="Login">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Login1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="EmpID" Type="Int32" />
-          <NavigationProperty Name="Employe" Relationship="Zakaz_220_KolpakovModel.FK_Logins_Employe" FromRole="Login" ToRole="Employe" />
-        </EntityType>
-        <Association Name="FK_Logins_Employe">
-          <End Type="Zakaz_220_KolpakovModel.Employe" Role="Employe" Multiplicity="0..1" />
-          <End Type="Zakaz_220_KolpakovModel.Login" Role="Login" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Employe">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="Login">
-              <PropertyRef Name="EmpID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Teacher_Employe">
-          <End Type="Zakaz_220_KolpakovModel.Employe" Role="Employe" Multiplicity="0..1" />
-          <End Type="Zakaz_220_KolpakovModel.Teacher" Role="Teacher" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Employe">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="Teacher">
-              <PropertyRef Name="EmpID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Employe_ZavCaph">
-          <End Type="Zakaz_220_KolpakovModel.ZavCaph" Role="ZavCaph" Multiplicity="0..1" />
-          <End Type="Zakaz_220_KolpakovModel.Employe" Role="Employe" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ZavCaph">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="Employe">
-              <PropertyRef Name="Chief" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="Хранилище Zakaz_220_KolpakovModelContainer" CdmEntityContainer="Zakaz_220_KolpakovEntities">
-          <EntitySetMapping Name="Academics">
-            <EntityTypeMapping TypeName="Zakaz_220_KolpakovModel.Academic">
-              <MappingFragment StoreEntitySet="Academics">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="birthdate" ColumnName="birthdate" />
-                <ScalarProperty Name="Speciality" ColumnName="Speciality" />
-                <ScalarProperty Name="assignment_year" ColumnName="assignment_year" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Caphedras">
+          <EntitySetMapping Name="Caphedra">
             <EntityTypeMapping TypeName="Zakaz_220_KolpakovModel.Caphedra">
               <MappingFragment StoreEntitySet="Caphedra">
                 <ScalarProperty Name="ID" ColumnName="ID" />
@@ -672,7 +622,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Disciples">
+          <EntitySetMapping Name="Disciple">
             <EntityTypeMapping TypeName="Zakaz_220_KolpakovModel.Disciple">
               <MappingFragment StoreEntitySet="Disciple">
                 <ScalarProperty Name="ID" ColumnName="ID" />
@@ -682,7 +632,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Employes">
+          <EntitySetMapping Name="Employe">
             <EntityTypeMapping TypeName="Zakaz_220_KolpakovModel.Employe">
               <MappingFragment StoreEntitySet="Employe">
                 <ScalarProperty Name="ID" ColumnName="ID" />
@@ -694,7 +644,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Engineers">
+          <EntitySetMapping Name="Engineer">
             <EntityTypeMapping TypeName="Zakaz_220_KolpakovModel.Engineer">
               <MappingFragment StoreEntitySet="Engineer">
                 <ScalarProperty Name="ID" ColumnName="ID" />
@@ -702,7 +652,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Exams">
+          <EntitySetMapping Name="Exam">
             <EntityTypeMapping TypeName="Zakaz_220_KolpakovModel.Exam">
               <MappingFragment StoreEntitySet="Exam">
                 <ScalarProperty Name="ID" ColumnName="ID" />
@@ -715,7 +665,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Facultets">
+          <EntitySetMapping Name="Facultet">
             <EntityTypeMapping TypeName="Zakaz_220_KolpakovModel.Facultet">
               <MappingFragment StoreEntitySet="Facultet">
                 <ScalarProperty Name="ID" ColumnName="ID" />
@@ -724,7 +674,17 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Specialities">
+          <EntitySetMapping Name="Logins">
+            <EntityTypeMapping TypeName="Zakaz_220_KolpakovModel.Logins">
+              <MappingFragment StoreEntitySet="Logins">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="EmpID" ColumnName="EmpID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Speciality">
             <EntityTypeMapping TypeName="Zakaz_220_KolpakovModel.Speciality">
               <MappingFragment StoreEntitySet="Speciality">
                 <ScalarProperty Name="ID" ColumnName="ID" />
@@ -734,7 +694,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Students">
+          <EntitySetMapping Name="Student">
             <EntityTypeMapping TypeName="Zakaz_220_KolpakovModel.Student">
               <MappingFragment StoreEntitySet="Student">
                 <ScalarProperty Name="ID" ColumnName="ID" />
@@ -743,31 +703,21 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="ZavCaphs">
+          <EntitySetMapping Name="Teacher">
+            <EntityTypeMapping TypeName="Zakaz_220_KolpakovModel.Teacher">
+              <MappingFragment StoreEntitySet="Teacher">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="rang" ColumnName="rang" />
+                <ScalarProperty Name="stepen" ColumnName="stepen" />
+                <ScalarProperty Name="EmpID" ColumnName="EmpID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ZavCaph">
             <EntityTypeMapping TypeName="Zakaz_220_KolpakovModel.ZavCaph">
               <MappingFragment StoreEntitySet="ZavCaph">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Experience" ColumnName="Experience" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Teachers">
-            <EntityTypeMapping TypeName="Zakaz_220_KolpakovModel.Teacher">
-              <MappingFragment StoreEntitySet="Teacher">
-                <ScalarProperty Name="EmpID" ColumnName="EmpID" />
-                <ScalarProperty Name="stepen" ColumnName="stepen" />
-                <ScalarProperty Name="rang" ColumnName="rang" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Logins">
-            <EntityTypeMapping TypeName="Zakaz_220_KolpakovModel.Login">
-              <MappingFragment StoreEntitySet="Logins">
-                <ScalarProperty Name="EmpID" ColumnName="EmpID" />
-                <ScalarProperty Name="Password" ColumnName="Password" />
-                <ScalarProperty Name="Login1" ColumnName="Login" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -785,7 +735,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />

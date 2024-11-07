@@ -17,7 +17,7 @@ namespace UP320_Kolpakov.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Facultet()
         {
-            this.Caphedras = new HashSet<Caphedra>();
+            this.Caphedra = new HashSet<Caphedra>();
         }
     
         public int ID { get; set; }
@@ -25,6 +25,6 @@ namespace UP320_Kolpakov.Model
         public string Name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Caphedra> Caphedras { get; set; }
+        public virtual ICollection<Caphedra> Caphedra { get; set; }
     }
 }

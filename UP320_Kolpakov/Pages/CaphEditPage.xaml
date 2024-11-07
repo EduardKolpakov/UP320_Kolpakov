@@ -1,0 +1,37 @@
+﻿<Page x:Class="UP320_Kolpakov.Pages.CaphEditPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UP320_Kolpakov.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1000"
+      Title="CaphEditPage" Background="Azure">
+
+    <Grid>
+        <Rectangle HorizontalAlignment="Center" Height="78" Stroke="Black" VerticalAlignment="Top" Width="1000" Fill="#FF0090FF"/>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="60" Height="75" FontFamily="Mistral"><Run Language="ru-ru" Text="Тэхеникум"/></TextBlock>
+        <TextBox x:Name="IdTxt" HorizontalAlignment="Center" Margin="0,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Height="25" PreviewTextInput="IdTxt_PreviewTextInput"/>
+        <TextBox x:Name="FacId" HorizontalAlignment="Center" Margin="0,201,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Height="25" PreviewTextInput="FacId_PreviewTextInput"/>
+        <TextBox x:Name="NameTxt" HorizontalAlignment="Center" Margin="0,231,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Height="25" PreviewTextInput="NameTxt_PreviewTextInput"/>
+        <TextBox x:Name="ShifrTxt" HorizontalAlignment="Center" Margin="0,261,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Height="25" PreviewTextInput="ShifrTxt_PreviewTextInput"/>
+        <Label Content="ID" HorizontalAlignment="Left" Margin="393,170,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.447,0.27"/>
+        <Label Content="ID факультета" HorizontalAlignment="Left" Margin="331,201,0,0" VerticalAlignment="Top"/>
+        <Label Content="Название" HorizontalAlignment="Left" Margin="354,232,0,0" VerticalAlignment="Top"/>
+        <Label Content="Шифр" HorizontalAlignment="Left" Margin="376,260,0,0" VerticalAlignment="Top"/>
+        <Button Content="Сохранить" HorizontalAlignment="Center" Margin="0,300,0,0" VerticalAlignment="Top" Width="84" Height="25" Click="Button_Click" Background="#FF78F0FF">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="BackBtn" Content="Back" HorizontalAlignment="Left" Margin="130,29,0,0" VerticalAlignment="Top" Width="66" Height="24" Click="BackBtn_Click" Background="#FF78F0FF">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+    </Grid>
+</Page>

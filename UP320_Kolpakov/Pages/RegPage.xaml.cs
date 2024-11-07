@@ -24,7 +24,7 @@ namespace UP320_Kolpakov.Pages
         public RegPage()
         {
             InitializeComponent();
-            var z = ConnectionClass.connect.Employes.ToList();
+            var z = ConnectionClass.connect.Employe.ToList();
             foreach (var items in z)
             {
                 EmployeeChoice.Items.Add(items.ID);
@@ -48,8 +48,8 @@ namespace UP320_Kolpakov.Pages
                     MessageBox.Show("Введите пароль!");
                     break;
                 }
-                Login newlog = new Login();
-                newlog.Login1 = login;
+                Logins newlog = new Logins();
+                newlog.Login = login;
                 newlog.Password = password;
                 if (emID != 0)
                 {

@@ -25,17 +25,16 @@ namespace UP320_Kolpakov.Model
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Academic> Academics { get; set; }
-        public virtual DbSet<Caphedra> Caphedras { get; set; }
-        public virtual DbSet<Disciple> Disciples { get; set; }
-        public virtual DbSet<Employe> Employes { get; set; }
-        public virtual DbSet<Engineer> Engineers { get; set; }
-        public virtual DbSet<Exam> Exams { get; set; }
-        public virtual DbSet<Facultet> Facultets { get; set; }
-        public virtual DbSet<Speciality> Specialities { get; set; }
-        public virtual DbSet<Student> Students { get; set; }
-        public virtual DbSet<ZavCaph> ZavCaphs { get; set; }
-        public virtual DbSet<Teacher> Teachers { get; set; }
-        public virtual DbSet<Login> Logins { get; set; }
+        public virtual DbSet<Caphedra> Caphedra { get; set; }
+        public virtual DbSet<Disciple> Disciple { get; set; }
+        public virtual DbSet<Employe> Employe { get; set; }
+        public virtual DbSet<Engineer> Engineer { get; set; }
+        public virtual DbSet<Exam> Exam { get; set; }
+        public virtual DbSet<Facultet> Facultet { get; set; }
+        public virtual DbSet<Logins> Logins { get; set; }
+        public virtual DbSet<Speciality> Speciality { get; set; }
+        public virtual DbSet<Student> Student { get; set; }
+        public virtual DbSet<Teacher> Teacher { get; set; }
+        public virtual DbSet<ZavCaph> ZavCaph { get; set; }
     }
 }

@@ -10,11 +10,17 @@
 
     <Grid>
         <Rectangle HorizontalAlignment="Center" Height="78" Stroke="Black" VerticalAlignment="Top" Width="1000" Fill="#FF0090FF"/>
-        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="60" Height="75" FontFamily="Mistral"><Run Language="ru-ru" Text="Кэтыц"/><LineBreak/><Run Language="ru-ru"/></TextBlock>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="60" Height="75" FontFamily="Mistral"><Run Language="ru-ru" Text="Тэхеникум"/></TextBlock>
         <TextBox x:Name="LoginTxt" HorizontalAlignment="Center" Margin="0,243,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" Height="23"/>
         <Label Content="Login" HorizontalAlignment="Left" Margin="417,212,0,0" VerticalAlignment="Top"/>
         <Label Content="Password" HorizontalAlignment="Left" Margin="414,279,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="RegBtn" Content="Register" HorizontalAlignment="Center" Margin="0,409,0,0" VerticalAlignment="Top" Width="90" Height="23" Click="RegBtn_Click"/>
+        <Button x:Name="RegBtn" Content="Register" HorizontalAlignment="Center" Margin="0,409,0,0" VerticalAlignment="Top" Width="90" Height="23" Click="RegBtn_Click" Background="#FF78F0FF">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
         <PasswordBox x:Name="PassTxt" HorizontalAlignment="Center" Margin="0,310,0,0" VerticalAlignment="Top" Width="166" Height="24"/>
         <ComboBox x:Name="EmployeeChoice" HorizontalAlignment="Center" Margin="0,366,0,0" VerticalAlignment="Top" Width="166" Height="25"/>
         <Label Content="Employee" HorizontalAlignment="Left" Margin="417,339,0,0" VerticalAlignment="Top"/>

@@ -1,4 +1,4 @@
-﻿// Создание кода T4 для модели "C:\Users\Kolpa\source\repos\UP320_Kolpakov\UP320_Kolpakov\Model\DbModel.edmx" включено. 
+﻿// Создание кода T4 для модели "C:\Users\202215\Source\Repos\EduardKolpakov\UP320_Kolpakov\UP320_Kolpakov\Model\DbModel.edmx" включено. 
 // Чтобы включить формирование кода прежних версий, измените значение свойства "Стратегия создания кода" конструктора
 // на "Legacy ObjectContext". Это свойство доступно в окне "Свойства", если модель
 // открыта в конструкторе.

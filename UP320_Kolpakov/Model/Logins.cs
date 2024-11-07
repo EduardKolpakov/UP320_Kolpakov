@@ -12,10 +12,10 @@ namespace UP320_Kolpakov.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Login
+    public partial class Logins
     {
         public int ID { get; set; }
-        public string Login1 { get; set; }
+        public string Login { get; set; }
         public string Password { get; set; }
         public Nullable<int> EmpID { get; set; }
     

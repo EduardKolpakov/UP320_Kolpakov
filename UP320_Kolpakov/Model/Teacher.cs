@@ -17,7 +17,7 @@ namespace UP320_Kolpakov.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Teacher()
         {
-            this.Exams = new HashSet<Exam>();
+            this.Exam = new HashSet<Exam>();
         }
     
         public int ID { get; set; }
@@ -25,8 +25,8 @@ namespace UP320_Kolpakov.Model
         public string stepen { get; set; }
         public Nullable<int> EmpID { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Exam> Exams { get; set; }
         public virtual Employe Employe { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Exam> Exam { get; set; }
     }
 }

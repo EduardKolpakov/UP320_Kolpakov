@@ -17,13 +17,13 @@ namespace UP320_Kolpakov.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public ZavCaph()
         {
-            this.Employes = new HashSet<Employe>();
+            this.Employe = new HashSet<Employe>();
         }
     
         public int ID { get; set; }
         public Nullable<int> Experience { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Employe> Employes { get; set; }
+        public virtual ICollection<Employe> Employe { get; set; }
     }
 }

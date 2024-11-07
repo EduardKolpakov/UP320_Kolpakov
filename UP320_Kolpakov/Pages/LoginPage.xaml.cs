@@ -29,22 +29,26 @@ namespace UP320_Kolpakov.Pages
 
         private void LoginBtn_Click(object sender, RoutedEventArgs e)
         {
-            int caphId;
+            int caphId = 0;
             string role = "";
             string log = LoginTxt.Text;
             string pas = PassTxt.Password;
-            var z = ConnectionClass.connect.Logins.Where(a => a.Login1 == log && a.Password == pas).FirstOrDefault();
+            var z = ConnectionClass.connect.Logins.Where(a => a.Login == log && a.Password == pas).FirstOrDefault();
             if (z != null)
             {
-                var zc = ConnectionClass.connect.Employes.Where(a => a.ID == z.EmpID).FirstOrDefault();
-                caphId = Convert.ToInt32(zc.CaphID);
-                if (zc.Position == "зав. кафедрой")
+                var zc = ConnectionClass.connect.Employe.Where(a => a.ID == z.EmpID).FirstOrDefault();
+                if (zc != null)
                 {
-                    role = "зав";
-                }
-                else if (zc.Position == "инженер")
-                {
-                    role = "инженер";
+                    caphId = Convert.ToInt32(zc.CaphID);
+
+                    if (zc.Position == "зав. кафедрой")
+                    {
+                        role = "зав";
+                    }
+                    else if (zc.Position == "инженер")
+                    {
+                        role = "инженер";
+                    }
                 }
                 else
                 {

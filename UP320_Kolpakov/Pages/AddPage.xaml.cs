@@ -81,7 +81,7 @@ namespace UP320_Kolpakov.Pages
                 em.CaphID = Convert.ToInt32(CaphIdTxt.Text);
                 em.Chief = Convert.ToInt32(ChiefId.Text);
                 em.Position = PosBox.SelectedValue.ToString();
-                ConnectionClass.connect.Employes.Add(em);
+                ConnectionClass.connect.Employe.Add(em);
                 if (em.Position != "инженер")
                 {
                     Teacher t = new Teacher();
@@ -89,7 +89,7 @@ namespace UP320_Kolpakov.Pages
                     t.EmpID = em.ID;
                     t.rang = RangBox.SelectedValue.ToString();
                     t.stepen = StepBox.SelectedValue.ToString();
-                    ConnectionClass.connect.Teachers.Add(t);
+                    ConnectionClass.connect.Teacher.Add(t);
                 }
                 ConnectionClass.connect.SaveChanges();
                 MessageBox.Show("Сотрудник добавлен!");
@@ -127,6 +127,30 @@ namespace UP320_Kolpakov.Pages
         private void BackBtn_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.GoBack();
+        }
+
+        private void IdTxt_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.Text, 0);
+        }
+
+        private void CaphIdTxt_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void FullNameTxt_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            if (!char.IsLetter(e.Text, 0))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void ChiefId_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+
+            e.Handled = !char.IsDigit(e.Text, 0);
         }
     }
 }

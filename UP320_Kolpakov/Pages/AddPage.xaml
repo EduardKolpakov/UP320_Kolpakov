@@ -10,11 +10,11 @@
 
     <Grid x:Name="AddTxt">
         <Rectangle HorizontalAlignment="Center" Height="78" Stroke="Black" VerticalAlignment="Top" Width="1000" Fill="#FF0090FF"/>
-        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="60" Height="75" FontFamily="Mistral"><Run Language="ru-ru" Text="Кэтыц"/><LineBreak/><Run Language="ru-ru"/></TextBlock>
-        <TextBox x:Name="IdTxt" HorizontalAlignment="Center" Margin="0,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Height="25"/>
-        <TextBox x:Name="CaphIdTxt" HorizontalAlignment="Center" Margin="0,201,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Height="25"/>
-        <TextBox x:Name="FullNameTxt" HorizontalAlignment="Center" Margin="0,231,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Height="25"/>
-        <TextBox x:Name="ChiefId" HorizontalAlignment="Center" Margin="0,291,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Height="25"/>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="60" Height="75" FontFamily="Mistral"><Run Language="ru-ru" Text="Тэхеникум"/><LineBreak/><Run/></TextBlock>
+        <TextBox x:Name="IdTxt" HorizontalAlignment="Center" Margin="0,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Height="25" PreviewTextInput="IdTxt_PreviewTextInput"/>
+        <TextBox x:Name="CaphIdTxt" HorizontalAlignment="Center" Margin="0,201,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Height="25" PreviewTextInput="CaphIdTxt_PreviewTextInput"/>
+        <TextBox x:Name="FullNameTxt" HorizontalAlignment="Center" Margin="0,231,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Height="25" PreviewTextInput="FullNameTxt_PreviewTextInput"/>
+        <TextBox x:Name="ChiefId" HorizontalAlignment="Center" Margin="0,291,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Height="25" PreviewTextInput="ChiefId_PreviewTextInput"/>
         <Label Content="ID" HorizontalAlignment="Left" Margin="393,170,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.447,0.27"/>
         <Label Content="ID кафедры" HorizontalAlignment="Left" Margin="346,201,0,0" VerticalAlignment="Top"/>
         <Label Content="ФИО" HorizontalAlignment="Left" Margin="377,232,0,0" VerticalAlignment="Top"/>
@@ -25,7 +25,19 @@
         <ComboBox x:Name="RangBox" HorizontalAlignment="Center" Margin="0,321,0,0" VerticalAlignment="Top" Width="160" Height="25" SelectionChanged="RangBox_SelectionChanged"/>
         <ComboBox x:Name="StepBox" HorizontalAlignment="Center" Margin="0,351,0,0" VerticalAlignment="Top" Width="160" Height="25"/>
         <ComboBox x:Name="PosBox" HorizontalAlignment="Center" Margin="0,261,0,0" VerticalAlignment="Top" Width="160" Height="25" SelectionChanged="PosBox_SelectionChanged"/>
-        <Button Content="Добавить" HorizontalAlignment="Center" Margin="0,399,0,0" VerticalAlignment="Top" Width="84" Height="25" Click="Button_Click"/>
-        <Button x:Name="BackBtn" Content="Back" HorizontalAlignment="Left" Margin="130,29,0,0" VerticalAlignment="Top" Width="66" Height="24" Click="BackBtn_Click"/>
+        <Button Content="Добавить" HorizontalAlignment="Center" Margin="0,399,0,0" VerticalAlignment="Top" Width="84" Height="25" Click="Button_Click" Background="#FF78F0FF">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="BackBtn" Content="Back" HorizontalAlignment="Left" Margin="130,29,0,0" VerticalAlignment="Top" Width="66" Height="24" Click="BackBtn_Click" Background="#FF78F0FF">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
     </Grid>
 </Page>
