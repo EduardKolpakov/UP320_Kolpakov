@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="468719d109d0453f895a0f6a762abd9a" Name="Diagram1" ZoomLevel="86">
+        <EntityTypeShape EntityType="Zakaz_220_KolpakovModel.Academic" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zakaz_220_KolpakovModel.Caphedra" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zakaz_220_KolpakovModel.Disciple" Width="1.5" PointX="5.25" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zakaz_220_KolpakovModel.Employe" Width="1.5" PointX="5.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zakaz_220_KolpakovModel.Engineer" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zakaz_220_KolpakovModel.Exam" Width="1.5" PointX="9.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zakaz_220_KolpakovModel.Facultet" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zakaz_220_KolpakovModel.Speciality" Width="1.5" PointX="5.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zakaz_220_KolpakovModel.Student" Width="1.5" PointX="7.5" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zakaz_220_KolpakovModel.ZavCaph" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <AssociationConnector Association="Zakaz_220_KolpakovModel.FK__Caphedra__FacID__778AC167" ManuallyRouted="false" />
+        <AssociationConnector Association="Zakaz_220_KolpakovModel.FK__Disciple__CaphID__01142BA1" ManuallyRouted="false" />
+        <AssociationConnector Association="Zakaz_220_KolpakovModel.FK__Employe__CaphID__7A672E12" ManuallyRouted="false" />
+        <AssociationConnector Association="Zakaz_220_KolpakovModel.FK__Specialit__CaphI__7E37BEF6" ManuallyRouted="false" />
+        <AssociationConnector Association="Zakaz_220_KolpakovModel.FK__Exam__DiscID__10566F31" ManuallyRouted="false" />
+        <AssociationConnector Association="Zakaz_220_KolpakovModel.FK__Employe__Chief__7B5B524B" ManuallyRouted="false" />
+        <AssociationConnector Association="Zakaz_220_KolpakovModel.FK__Exam__StudentID__114A936A" ManuallyRouted="false" />
+        <AssociationConnector Association="Zakaz_220_KolpakovModel.FK__Student__SpecID__0D7A0286" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Zakaz_220_KolpakovModel.Teacher" Width="1.5" PointX="10.375" PointY="0.875" />
+        <AssociationConnector Association="Zakaz_220_KolpakovModel.FK__Exam__TeacherID__123EB7A3" />
+        <EntityTypeShape EntityType="Zakaz_220_KolpakovModel.Login" Width="1.5" PointX="10.375" PointY="8.875" />
+        <AssociationConnector Association="Zakaz_220_KolpakovModel.FK_Logins_Employe" />
+        <AssociationConnector Association="Zakaz_220_KolpakovModel.FK_Teacher_Employe" />
+        <AssociationConnector Association="Zakaz_220_KolpakovModel.FK_Employe_ZavCaph" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
